@@ -1,10 +1,8 @@
 <template>
     <lightning-card title="Información de Adopción" icon-name="utility:animal_and_nature">
         <template if:true={adoption}>
-            <template if:true={adoption.isAdopted}>
-                <div class="certificate">
-                    <img src="/resource/adopted_stamp" alt="Certificado de adopción" />
-                </div>
+            <template if:false={adoption}>
+                <p>No hay información disponible.</p>
             </template>
             <div class="info">
                 <p><strong>Contact Name:</strong> {adoption.contactName}</p>
@@ -13,9 +11,13 @@
                 <p><strong>Race:</strong> {adoption.petBreed}</p>
                 <p><strong>Date of adoption:</strong> {adoption.adoptionDate}</p>
             </div>
+
+            <template if:true={adoption.isAdopted}>
+                <div class="certificate">
+                    <img src="/resource/adopted_stamp" alt="Certificado de adopción" />
+                </div>
+            </template>
         </template>
-        <template if:false={adoption}>
-            <p>No hay información disponible.</p>
-        </template>
+        
     </lightning-card>
 </template>

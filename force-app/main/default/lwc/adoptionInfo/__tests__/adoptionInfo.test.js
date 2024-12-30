@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import AdoptionInfo from 'c/adoptionInfo';
 
 describe('c-adoption-info', () => {
