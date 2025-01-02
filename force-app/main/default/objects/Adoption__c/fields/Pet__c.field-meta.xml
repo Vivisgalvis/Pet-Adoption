@@ -4,7 +4,6 @@
     <deleteConstraint>SetNull</deleteConstraint>
     <label>Pet</label>
     <referenceTo>Pet__c</referenceTo>
-    <relationshipLabel>Adoptions</relationshipLabel>
     <relationshipName>Adoptions</relationshipName>
     <required>false</required>
     <trackTrending>false</trackTrending>

@@ -1,9 +1,7 @@
 <template>
     <lightning-card title="Información de Adopción" icon-name="utility:animal_and_nature">
         <template if:true={adoption}>
-            <template if:false={adoption}>
-                <p>No hay información disponible.</p>
-            </template>
+            
             <div class="info">
                 <p><strong>Contact Name:</strong> {adoption.contactName}</p>
                 <p><strong>Age of contact:</strong> {adoption.contactAge}</p>
@@ -18,6 +16,8 @@
                 </div>
             </template>
         </template>
-        
+        <template if:false={adoption}>
+            <p>No hay información disponible.</p>
+        </template>
     </lightning-card>
 </template>

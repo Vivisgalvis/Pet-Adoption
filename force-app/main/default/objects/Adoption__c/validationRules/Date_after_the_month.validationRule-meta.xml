@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_after_the_month</fullName>
+    <active>true</active>
+    <errorConditionFormula>YEAR(adoption_date__c) &gt; YEAR(TODAY()) || 
+(YEAR(adoption_date__c) = YEAR(TODAY()) &amp;&amp; MONTH(adoption_date__c) &gt; MONTH(TODAY()))</errorConditionFormula>
+    <errorDisplayField>adoption_date__c</errorDisplayField>
+    <errorMessage>The adoption date cannot be later than the current month</errorMessage>
+</ValidationRule>
