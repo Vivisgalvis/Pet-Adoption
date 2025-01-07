@@ -1,23 +1,30 @@
 import { LightningElement, api } from 'lwc';
+import getAdoptionDetails from '@salesforce/apex/AdoptionController.getAdoptionDetails';
 
 export default class AdoptionInfo extends LightningElement {
-    @api recordId; // ID del registro de adopción
-    adoption = null;
+  @api recordId; // ID del registro de adopción
+  contactName;
+  contactAge;
+  petName;
+  petBreed;
+  adoptionDate;
+  adopted;
 
-    connectedCallback() {
-        // Simular una llamada a Apex o servicio de datos
-        this.fetchAdoptionInfo();
-    }
+  connectedCallback() {
+    this.fetchAdoptionDetails();
+  }
 
-    fetchAdoptionInfo() {
-        // Reemplazar con una llamada a un método Apex
-        this.adoption = {
-            contactName: 'Juan Pérez',
-            contactAge: 25,
-            petName: 'Max',
-            petBreed: 'Poodle',
-            adoptionDate: '2024-12-01',
-            isAdopted: true,
-        };
+  async fetchAdoptionDetails() {
+    try {
+      const data = await getAdoptionDetails({ adoptionId: this.recordId });
+      this.contactName = data.contactName;
+      this.contactAge = data.contactAge;
+      this.petName = data.petName;
+      this.petBreed = data.petBreed;
+      this.adoptionDate = data.adoptionDate;
+      this.adopted = data.adopted;
+    } catch (error) {
+      console.error(error);
     }
+  }
 }
