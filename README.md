@@ -71,18 +71,18 @@ cd Pet-Adoption
 🖼️ Capturas de Pantalla
 
 1. Diseño de registros y páginas Lightning.
-    ![Diseño de Contacts](images/Diseño_vista_contactos.PNG)
-    ![Diseño de Pets](images/Diseño_vista_pets.PNG)
-    ![Diseño de Adoptiosns](images/Diseño_vista_adoptions.PNG)
-    ![Diseño de History Adoptiosns](images/Diseño_vista_history_adoptions.PNG)
+    ![Diseño de Contacts](Images/Diseño_vista_contactos.PNG)
+    ![Diseño de Pets](Images/Diseño_vista_pets.PNG)
+    ![Diseño de Adoptiosns](Images/Diseño_vista_adoptions.PNG)
+    ![Diseño de History Adoptiosns](Images/Diseño_vista_history_adoptions.PNG)
 
 
 2. Resultados de pruebas unitarias en Apex.
-    ![Captura de pantalla test](images/Imagen_test.PNG)
+    ![Captura de pantalla test](Images/Imagen_test.PNG)
 
 3. Reportes y dashboards de KPI.
-    ![Reports](images/Diseño_vista_reports.PNG)
-    ![Dashboards](images/Diseño_vista_dashboards.PNG)
+    ![Reports](Images/Diseño_vista_reports.PNG)
+    ![Dashboards](Images/Diseño_vista_dashboards.PNG)
 
 
 
